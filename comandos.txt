@@ -6,7 +6,7 @@ ls -a (muestra los archivos ocultos)
 ls -l (muestra los archivos con mas detalle)
 ls -t (muestra los archivos en orden cronologico)
 ls -r (muestra los archivos en orden cronologico inverso)
-ls -latr
+ls -latrgit add
 ls -R (lista los archivos de forma recursiva)
 tree -d (lista los directorios solamente)
 chmod (cambiar permisos)
@@ -21,3 +21,8 @@ r w x
 
 u(usuario) g(grupo) o(otros)
 chmod 754 (todos los accesos al usuario, lectura y escritura para el grupo y lectura para otros usuarios)
+
+chgrp adm python.py (cambia el directorio del archivo)
+
+touch (crea un archivo si no existe, si existe actualiza su fecha de modificacion)
+umask 007 (para definir los permisos de creacion)
