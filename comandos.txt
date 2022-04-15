@@ -1,4 +1,23 @@
-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
 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
+git push https://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@github.com/EduardoMontero-100/Plotly-Dashboards.git
 
-git push https://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@github.com/EduardoMontero-100/Plotly-Dashboards.git
+Comandos Linux:
+ls -a (muestra los archivos ocultos)
+ls -l (muestra los archivos con mas detalle)
+ls -t (muestra los archivos en orden cronologico)
+ls -r (muestra los archivos en orden cronologico inverso)
+ls -latr
+ls -R (lista los archivos de forma recursiva)
+tree -d (lista los directorios solamente)
+chmod (cambiar permisos)
+chmod g+x python.py (asignar permisos ejecucion al grupo)
+chmod o-wx,g-x python.py (asignar permisos de ejecucion y escritura sobre others;
+                          quitar el permiso de escritura al grupo del archivo)
+chmod a=r python.py (archivo de solo lectura)
+chmod u=wrx,g=wr,o= python.py (otros usuarios no pueden hacer nada sobre este archivo)
+r w x
+4 2 1 (notacion octal)
+1 1 1 (notacion binaria)
+
+u(usuario) g(grupo) o(otros)
+chmod 754 (todos los accesos al usuario, lectura y escritura para el grupo y lectura para otros usuarios)
