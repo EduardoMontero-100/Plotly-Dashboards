@@ -9,6 +9,8 @@ ls -r (muestra los archivos en orden cronologico inverso)
 ls -latrgit add
 ls -R (lista los archivos de forma recursiva)
 tree -d (lista los directorios solamente)
+
+Cambiar Permisos:
 chmod (cambiar permisos)
 chmod g+x python.py (asignar permisos ejecucion al grupo)
 chmod o-wx,g-x python.py (asignar permisos de ejecucion y escritura sobre others;
@@ -22,7 +24,18 @@ r w x
 u(usuario) g(grupo) o(otros)
 chmod 754 (todos los accesos al usuario, lectura y escritura para el grupo y lectura para otros usuarios)
 
-chgrp adm python.py (cambia el directorio del archivo)
+chgrp adm python.py (cambia el grupo del archivo)
 
 touch (crea un archivo si no existe, si existe actualiza su fecha de modificacion)
-umask 007 (para definir los permisos de creacion)
+umask   007 (para definir los permisos de creacion del archivo)
+        777 para directorios
+        666 para archivos
+
+umask -S modo (modo contrario al chmod)
+umask -S 700 (quitar todos los permisos)
+mascaras de creación más usadas en linux: 
+022
+002
+077
+007
+u=rwx,g=rwx,o=rx Notación simbólica
