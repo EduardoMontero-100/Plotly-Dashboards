@@ -1,9 +1,12 @@
 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
 git push https://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@github.com/EduardoMontero-100/Plotly-Dashboards.git
-
+--------------------
+--------------------
 Comandos Linux:
-ls -a (muestra los archivos ocultos)
+--------------------
+--------------------
 ls -l (muestra los archivos con mas detalle)
+ls -a (muestra los archivos ocultos)
 ls -t (muestra los archivos en orden cronologico)
 ls -r (muestra los archivos en orden cronologico inverso)
 ls -latrgit add
@@ -39,3 +42,42 @@ mascaras de creación más usadas en linux:
 077
 007
 u=rwx,g=rwx,o=rx Notación simbólica
+--------------------------------------------
+find (buscar archivos)
+locate (buscar archivos. Es más rápido que find)
+--------------------------------------------
+Contenido de un archivo:
+cat file
+more file
+less file
+head file
+tail file
+head -2 file.txt
+tail -2 file.txt
+nano file.txt (editar el contenido de un archivo usando el editor nano. Facil pero no es poderoso)
+vi file
+----------------------------------------
+-- Emacs (Editor de texto)
+-- gedit (Es el programa más usado )
+----------------------------------------
+rm -f file (borrar forsosamente un archivo)
+rm -r directory (borrar recursivamente un directorio)
+cp file_source file_destination
+cp -i (copiar de forma interactiva)
+cp -r archivo_origen destino (copiar de manera recursiva al destino)
+mv ruta_origen ruta_destino (si no exista la ruta renombra el directorio. Los mismo ocure con los archivos)
+sort file (ordena el texto contenido en un archivo)
+sort -u file (elimina lineas duplicadas)
+sort -ru file (elimina lineas duplicadas e invierte el orden)
+sort -u -k2 file (ordena en base a la segunda columna del archivo)
+tar (Paquetes de archivos )
+tar cf folder.tar folder
+tar tf folder.tar (en lista el contenido del archivo .tar)
+tar xf /home/eduardo/folder2.tar (descomprime el contido del archivo .tar)
+tar xvf /home/eduardo/folder2.tar (muestra el resultado de la operacion)
+zip file (para comprimir el archivo)
+du -k file (ver el peso de un archivo en kb)
+gunzip file (descomprimir un archivo)
+
+
+
