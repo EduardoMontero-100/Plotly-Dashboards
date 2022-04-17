@@ -79,5 +79,72 @@ zip file (para comprimir el archivo)
 du -k file (ver el peso de un archivo en kb)
 gunzip file (descomprimir un archivo)
 
+--------------------------------
+Wildcards (Globing / Comodines)
+--------------------------------
+* ==> todos
+? ==> exactamente un caracter
+a?.txt (a1.txt, a2.txt)
+ca[nt]*:
+can 
+cat
+candy
+[!aeiou]*: Un caracter que no este dentro del par de corchetes
+[a-g]*: Todos los archivos que comiencen con a-b-c-d-e-f-g 
+[3-6]*: Coinciden todos los archivos que comiencen con 3-4-5 ó 6
+
+Clases predefinidas de caracteres:
+[[:alpha:]]
+[[:alnum:]]
+[[:digit:]]
+[[:lower:]] 
+[[:space:]]  (todos los espacios y sangrias)
+[[:upper:]]
+\ escapar caracteres: Se usa para incluir caracteres del Wildcard en un patrón de coincidencias
+*\?
+done? (ya es que es una palabra que termina con un signo de interrogación)
+ls a*
+ls ? (enlistar todos los archivos que empiezan con un solo caracter)
+ls ??
+ls -l a*.txt
+ls c[aeiou]t 
+ls *[[:digit:]]
+rm ?? (borro archivos que tienen dos caracteres)
+
+Tipos de entrada y salida (Tipos I/O)
+Entrada estandar: 0
+Salida estandar: 1
+Error estandar: 2
+Redireccionamiento:
+ > in
+ >> añadir la salida al final del archivo
+ < out
+Guardo la salida de un comando a un archivo: 
+ls -l > files.txt
+ls -l 1> files.txt
+ls -l >> files.txt (añade al final del archivo)
+sort < files.txt (ordenar el archivo txt)
+sort < files.txt >> sorted_files.txt (guarda en el archivo sorted_files.txt, el contenido de files.txt ordenado)
+ls files.txt not-here 2>out.err (guarda el error resultante del comando en el archivo out.err)
+ls files.txt not-here-d 1>out 2>out.err(combina la salida estandar y el error)
+ls files.txt not-heere > out.both 2>&1 (guarda la salida y el error en el mismo archivo)
+
+ls files.txt not-here 2>/dev/null (guardo los errores en el directorio /dev/null)
+----------------------------------------
+ Comparando el contenido de archivos:
+----------------------------------------
+ diff archivo1 archivo2:
+  3c3 ==> La tercera linea del archivo1 es diferente a la tercera linea del archivo2
+  Acccion c(change); a(add); d(delete)
+
+ sdiff archivo1 archivo2
+:
+Prueba1								Prueba1
+Prueba2								Prueba2
+Prueba3							      |	PruebaX
+Prueba4								Prueba4
+ vimdiff archivo1 archivo2:
+
+
 
 
